@@ -1,0 +1,14 @@
+@import "src/_config.scss";
+@import "src/_elements.scss";
+
+.main-container{
+  @include grid-mobile();  
+}
+
+@include desktop-screen{
+  .main-container{
+    @include grid-desktop(); 
+  }
+}
+
+@import "src/_anim.scss";

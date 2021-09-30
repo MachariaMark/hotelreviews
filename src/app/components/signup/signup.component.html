@@ -1,0 +1,54 @@
+<div class="div content-container" id="content-container">
+  <p>
+    <mat-toolbar>
+      <span>signup</span>
+    </mat-toolbar>
+  </p>
+  <form>
+    <mat-vertical-stepper>
+      <mat-step>
+        <ng-template matStepLabel>Fill out your Email</ng-template>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter your email here" formControlName="email" required>
+        </mat-form-field>
+        <div>
+          <button mat-raised-button colors='warm' matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Fill out your username</ng-template>
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Enter your username here" formControlName="username" required>
+        </mat-form-field>
+        <div>
+          <button mat-raised-button colors='warm' matStepperPrevious>Back</button>
+          <button mat-raised-button colors='warm' matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Fill out your password</ng-template>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Enter your username here" required>
+        </mat-form-field>
+        <div>
+          <button mat-raised-button colors='accent' matStepperPrevious>Back</button>
+          <button mat-raised-button colors='warm' matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-raised-button color='accent' matStepperPrevious>Back</button>
+          <button mat-raised-button color='warm'>Signuo</button>
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+  </form>
+  <div style="display: none;" class="errorContainer id=emailerrormsg">
+    <p>User with this email already exists.</p>
+  </div>
+</div>

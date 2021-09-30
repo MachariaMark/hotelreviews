@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100% !important;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+$desktop: 768px;
+
+@mixin grid-mobile {
+  display: grid !important;
+  // grid-template-columns: 1fr;
+}
+
+@mixin grid-desktop {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin desktop-screen {
+  @media(min-width:$desktop){
+    @content;
+  }
+}
